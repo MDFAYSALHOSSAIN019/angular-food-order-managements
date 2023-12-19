@@ -98,8 +98,28 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "angular-food-order-management:build:production",
+              "serveTarget": "angular-food-order-management:serve:production"
+            },
+            "development": {
+              "buildTarget": "angular-food-order-management:build:development",
+              "serveTarget": "angular-food-order-management:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d197f417-d74c-4680-8979-a0ab597d2019"
   }
 }

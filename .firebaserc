@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-food-order-management": {
+      "hosting": {
+        "angular-food-order-management": [
+          "angular-food-order-management"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-food-order-management"
+  }
+}
