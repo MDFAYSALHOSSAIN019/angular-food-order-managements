@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "name": "Burgar",
+      "description": "Deaf ade afe hesd",
+      "price": "254",
+      "category": "desserts",
+      "image": "https://images.unsplash.com/photo-1611068120813-eca5a8cbf793?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": 1
+    },
+    {
+      "name": "banana",
+      "description": "this is a fruite ",
+      "price": "10",
+      "category": "desserts",
+      "image": "https://media.istockphoto.com/id/1458753551/photo/ducasse-banana-or-nam-wah-banana-or-sugar-banana-isolate-on-whitebackground.jpg?s=1024x1024&w=is&k=20&c=yBpKCiv0ZpB1Kt3rqarrlkcE8YDmC4Qepdyl_1wJdWo=",
+      "id": 2
+    },
+    {
+      "name": "Thai Soup",
+      "description": "chains best thai sopu",
+      "price": "500",
+      "category": "fastFood",
+      "image": "https://images.unsplash.com/photo-1611068120813-eca5a8cbf793?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": 3
+    }
+  ]
+}

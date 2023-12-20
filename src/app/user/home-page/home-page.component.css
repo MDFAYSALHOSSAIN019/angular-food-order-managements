@@ -30,3 +30,10 @@ a.close-icon:hover {
 .dropdown-item {
     cursor: pointer;
 }
+
+#header-image-div {
+    margin-top: 60px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+

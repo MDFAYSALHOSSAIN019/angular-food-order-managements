@@ -9,18 +9,20 @@ import { AddProductComponent } from './admin/add-product/add-product.component';
 import { HomePageComponent } from './user/home-page/home-page.component';
 import { CartProductComponent } from './user/cart-product/cart-product.component';
 import { HomenavComponent } from './user/homenav/homenav.component';
+import { ViewItemComponent } from './user/view-item/view-item.component';
 
 const routes: Routes = [
 
   {path:'', component:HomePageComponent},
   {path:'login',component:LoginComponent},
   {path:'signup', component:SignupComponent},
-  {path:'dashboard',component:DashboardComponent},
+  {path:'dashboard',component:DashboardComponent },
   {path:'adminnav',component:NavberComponent},
   {path: 'addproduct', component: AddProductComponent },
   {path:'home-page',component:HomePageComponent},
   {path:'All-cart-item',component:CartProductComponent},
-  {path:'home', component:HomenavComponent}
+  {path:'home', component:HomenavComponent},
+  {path:'view-item',component:ViewItemComponent}
 
 
 ];

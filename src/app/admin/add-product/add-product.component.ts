@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'; // Import FormBuilder and FormGroup
-import { product } from '../../model/productInfo'; // Import the correct product interface
+import { product } from '../../model/data-type'; // Import the correct product interface
 import { AuthService } from '../../services/auth.service';
 import { ProductsService } from '../../services/products.service';
 import {AngularFireStorage} from '@angular/fire/compat/storage'
@@ -12,17 +12,17 @@ import {AngularFireStorage} from '@angular/fire/compat/storage'
 })
 export class AddProductComponent implements OnInit {
   productsList: product[] = [];
-  productObj: product = {
-    id: '',
-    name: '',
-    description: '',
-    price: 0,
-    category: '',
-    imageUrl: '',
-    addedOn: '',
-    modifiedOn: '',
-    isAvailable: true
-  };
+  // productObj: product = {
+  //   // id: '',
+  //   name: '',
+  //   description: '',
+  //   price: 0,
+  //   category: '',
+  //   image: '',
+  //   // addedOn: '',
+  //   // modifiedOn: '',
+  //   // isAvailable: true
+  // };
 
   productForm: FormGroup= this.fb.group({
     name: '', // Use Validators.required for mandatory fields
@@ -30,11 +30,13 @@ export class AddProductComponent implements OnInit {
     price: 0,
     category: '',
     imageUrl: ''
-  });; // Define productForm as a FormGroup
-
+  });
+  
+  // Define productForm as a FormGroup
+  addProductMessage: string | undefined;
   constructor(
     private auth: AuthService,
-    private data: ProductsService,
+    private product: ProductsService,
     private fb: FormBuilder, // Inject FormBuilder
     private fireStroage:AngularFireStorage
   ) {}
@@ -43,28 +45,52 @@ export class AddProductComponent implements OnInit {
     
   }
 
+  // resetForm() {
+  //   this.productForm.reset({
+  //     name: '',
+  //     description: '',
+  //     price: 0,
+  //     category: '',
+  //     imageUrl: ''
+  //   });
+  // }
+
+  // addProduct() {
+  //   if (this.productForm.invalid) {
+  //     alert('Fill all required fields');
+  //     return;
+  //   }
+
+  //   const productData: product = this.productForm.value;
+
+  //   this.product.addProduct(productData);
+  //   this.resetForm();
+  // }
+
   resetForm() {
-    this.productForm.reset({
-      name: '',
-      description: '',
-      price: 0,
-      category: '',
-      imageUrl: ''
-    });
-  }
-
-  addProduct() {
-    if (this.productForm.invalid) {
-      alert('Fill all required fields');
-      return;
+    // Clear form fields and any error messages
+    const form = document.getElementById('addProduct') as HTMLFormElement; // Get the form element
+    if (form) {
+      form.reset(); // Reset the form using its built-in method
+  
+      // Clear any error messages manually (if not cleared automatically)
+      const errorMessages = document.querySelectorAll('.error-text');
+      errorMessages.forEach((message) => (message.textContent = ''));
     }
-
-    const productData: product = this.productForm.value;
-
-    this.data.addProduct(productData);
-    this.resetForm();
   }
+  submit(data: product) {
+    this.product.addProduct(data).subscribe((result) => {
+      console.warn(result);
+      if (result) {
+        this.addProductMessage = 'Product is added successfully';
+        this.resetForm();
+      }
+    });
 
+    setTimeout(() => {
+      this.addProductMessage=undefined
+    }, 3000);
+  }
 
 // onImageSelected(event: Event) {
 //   const file = event.target?.files?.[0];

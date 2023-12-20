@@ -22,6 +22,10 @@ import { CartProductComponent } from './user/cart-product/cart-product.component
 
 
 import { HomenavComponent } from './user/homenav/homenav.component';
+import { ViewItemComponent } from './user/view-item/view-item.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,9 @@ import { HomenavComponent } from './user/homenav/homenav.component';
     AddProductComponent,
     HomePageComponent,
     CartProductComponent,
-    HomenavComponent
+    HomenavComponent,
+    ViewItemComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -43,6 +49,8 @@ import { HomenavComponent } from './user/homenav/homenav.component';
     ReactiveFormsModule,
     AngularFireModule,
     AngularFireStorageModule,
+    NgbModule,
+     FontAwesomeModule,
 
     provideFirebaseApp(() => initializeApp({"projectId":"angular-food-order-management","appId":"1:414132381419:web:d69001ca3a0ea322be40ae","storageBucket":"angular-food-order-management.appspot.com","apiKey":"AIzaSyCvt_czY3CcpEOXwgFydL9qjqPY8kQZw0E","authDomain":"angular-food-order-management.firebaseapp.com","messagingSenderId":"414132381419"})),
     provideAuth(() => getAuth()),
