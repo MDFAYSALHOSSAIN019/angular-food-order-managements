@@ -20,6 +20,9 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { HomePageComponent } from './user/home-page/home-page.component';
 import { CartProductComponent } from './user/cart-product/cart-product.component';
 
+
+import { HomenavComponent } from './user/homenav/homenav.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +32,8 @@ import { CartProductComponent } from './user/cart-product/cart-product.component
     NavberComponent,
     AddProductComponent,
     HomePageComponent,
-    CartProductComponent
+    CartProductComponent,
+    HomenavComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +43,7 @@ import { CartProductComponent } from './user/cart-product/cart-product.component
     ReactiveFormsModule,
     AngularFireModule,
     AngularFireStorageModule,
+
     provideFirebaseApp(() => initializeApp({"projectId":"angular-food-order-management","appId":"1:414132381419:web:d69001ca3a0ea322be40ae","storageBucket":"angular-food-order-management.appspot.com","apiKey":"AIzaSyCvt_czY3CcpEOXwgFydL9qjqPY8kQZw0E","authDomain":"angular-food-order-management.firebaseapp.com","messagingSenderId":"414132381419"})),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore())

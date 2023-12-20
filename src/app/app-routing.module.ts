@@ -8,17 +8,19 @@ import { NavberComponent } from './admin/navber/navber.component';
 import { AddProductComponent } from './admin/add-product/add-product.component';
 import { HomePageComponent } from './user/home-page/home-page.component';
 import { CartProductComponent } from './user/cart-product/cart-product.component';
+import { HomenavComponent } from './user/homenav/homenav.component';
 
 const routes: Routes = [
 
-  {path:'', component:AppComponent},
+  {path:'', component:HomePageComponent},
   {path:'login',component:LoginComponent},
   {path:'signup', component:SignupComponent},
   {path:'dashboard',component:DashboardComponent},
-  {path:'adminNav',component:NavberComponent},
+  {path:'adminnav',component:NavberComponent},
   {path: 'addproduct', component: AddProductComponent },
   {path:'home-page',component:HomePageComponent},
-  {path:'All-cart-item',component:CartProductComponent}
+  {path:'All-cart-item',component:CartProductComponent},
+  {path:'home', component:HomenavComponent}
 
 
 ];

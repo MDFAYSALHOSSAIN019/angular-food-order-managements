@@ -46,7 +46,7 @@
 </div> -->
 
 
-<div class="container" id="navbar-container">
+<!-- <div class="container" id="navbar-container">
     <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Eighth navbar example">
         <div class="container">
             <a class="navbar-brand" [routerLink]="['dashboard']">Star Kabab Resturent</a><br>
@@ -81,7 +81,7 @@
                         <div class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" >Profile</a>
                             <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" >Customer Cart</a>
-                            <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" >All Orders</a>
+                            <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" routerLink="/All-cart-item" >All Orders</a>
                             <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" >Manage Items</a>
                             <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" >Manage Orders</a>
                             <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" >Log out</a>
@@ -91,4 +91,19 @@
             </div>
         </div>
     </nav>
-</div>
+</div> -->
+
+
+
+
+<div class="dropdown">
+    <a class="btn btn-warning dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Admin Activity
+    </a>
+  
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" routerLink="/addproduct">addproduct</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>
