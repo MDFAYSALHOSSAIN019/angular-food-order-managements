@@ -10,7 +10,8 @@ import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 })
 export class DashboardComponent implements OnInit{
 
-
+   card:boolean=false;
+   table:boolean=true;
 
 
   popularProducts:undefined|product[];
@@ -73,6 +74,19 @@ export class DashboardComponent implements OnInit{
        }
      );
    }
+
+
+   cardbutton(){
+    this.card=true;
+    this.table=false;
+   }
+
+   tablebutton(){
+    this.card=false;
+    this.table=true;
+   }
+
+
  }
    
 

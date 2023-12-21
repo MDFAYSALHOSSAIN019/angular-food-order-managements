@@ -13,7 +13,21 @@
 </div> -->
 
 <app-navber></app-navber>
-<div class="product-list-wrapper" >
+
+
+<div class="row my-2">
+  <div class="col-md-2"></div>
+  <div class="col-md-2"></div>
+  <div class="col-md-2"></div>
+  <div class="col-md-2"></div>
+  <div class="col-md-2"></div>
+  <div class="col-md-2">
+    <button class="btn btn-outline-warning mx-2" (click)="cardbutton()" *ngIf="table" >view</button> 
+    <button class="btn btn-outline-info" (click)="tablebutton()" *ngIf="card" >List</button>
+  </div>
+</div>
+
+<div class="product-list-wrapper card" >
 
     <div class="row">
       <div class="col-sm-3 mt-5" *ngFor="let item of trendyProducts">
@@ -34,8 +48,8 @@
         </div>
       </div>
 
-
-      <!-- <div class="product-list">
+ 
+      <div class="product-list card card-center" >
         <h1>Product List</h1>
         <p class="message-p">{{ productMessage }}</p>
         <table>
@@ -67,6 +81,6 @@
           </tbody>
         </table>
       </div>
-       -->
+      
 
 
