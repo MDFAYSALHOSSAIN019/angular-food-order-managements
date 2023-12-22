@@ -18,14 +18,24 @@
                         <a class="nav-link" [routerLink]="['/view-item']" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" [routerLink]="['/All-cart-item']" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Cart</a>
+                        <a class="nav-link fa fa-shopping-cart"  data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"[routerLink]="cartItems>0?'/All-cart-item':null">Cart({{cartItems}})</a>
+                    </li>
+
+
+                    <li class="nav-item" >
+                        <a class="nav-link" data-bs-toggle="collapse" routerLink="/my-order">My Order</a>
                     </li>
                     <li class="nav-item" >
-                        <a class="nav-link" [routerLink]="['/login']" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Log in</a>
+                        <a class="nav-link" data-bs-toggle="collapse" routerLink="/userlogin">Login/SignUp</a>
                     </li>
-                    <li class="nav-item" >
+
+                    <!-- <button type="button" class="btn mt-1"  data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                       <h4>Login/SignUp</h4>
+                      </button> -->
+
+                    <!-- <li class="nav-item" >
                         <a class="nav-link" [routerLink]="['/signup']" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Sign up</a>
-                    </li>
+                    </li> -->
 
                     <li class="nav-item dropdown" >
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -33,11 +43,9 @@
                             </a>
                         <div class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" >Profile</a>
-                            <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" >My Cart</a>
-                            <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" >My Orders</a>
-                            <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" >Manage Items</a>
-                            <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" >Manage Orders</a>
-                            <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" >Log out</a>
+                            <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" routerLink="/All-cart-item" >My Cart</a>
+                            <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" routerLink="/my-order" >My Orders</a>
+                            <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"  >Log out</a>
                         </div>
                     </li>
                 </ul>
@@ -45,4 +53,95 @@
         </div>
     </nav>
 </div>
+  
+  
+  <!-- Modal
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">User Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form >
 
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email</label>
+                  <input type="email" class="form-control" name="email"  ngModel>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" name="password"  ngModel>
+                </div>
+                <button type="button" class="btn btn-info" >Login</button>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a style="text-decoration: none;">Need Account ? <span class="text-danger" >SignUp</span></a>
+                    </div>
+                    
+                </div>
+                <div class="row mt-2">
+                    <a style="text-decoration: none;cursor: pointer;">
+
+                    </a>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary"   data-bs-toggle="modal" data-bs-target="#exampleModal">signUp</button>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">User signUp</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form #userSignUp="ngForm" class="common-form" (ngSubmit)="signUp(userSignUp.value)">
+
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email</label>
+                  <input type="email" class="form-control" name="email"  ngModel>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" name="password" ngModel >
+
+
+                  <label for="exampleInputPassword1" class="form-label">Name</label>
+                  <input type="text" class="form-control" name="password" ngModel >
+                </div>
+                <button type="button" class="btn btn-info" >SignUp</button>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a style="text-decoration: none;">Need Account ? <span class="text-danger">Login</span></a>
+                    </div>
+                    
+                </div>
+                <div class="row mt-2">
+                    <a style="text-decoration: none;cursor: pointer;">
+
+                    </a>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+        
+        </div>
+      </div>
+    </div>
+  </div>
+ -->

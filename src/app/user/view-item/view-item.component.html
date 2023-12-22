@@ -26,8 +26,13 @@
 
     </div>
     <div class="product-footer">
-      <a routerLink="/details/{{item.id}}">View Details</a>&nbsp;&nbsp;
-      <a href="">Add to Cart</a>
+      <button  class="form-button btn btn-secondary"   routerLink="/product-details/{{item.id}}">View Details </button>
+      <!-- <a routerLink="/product-details/{{item.id}}">View Details</a>&nbsp;&nbsp; -->
+      <!-- <a href="" (click)="addToCart()">Add to Cart</a> -->
+
+<!-- <button *ngIf="removeCart" class="form-button" (click)=" removeToCart(productData.id)">Remove to Cart</button> -->
+<!-- <button  class="form-button" (click)="addToCart()">Add to Cart</button> -->
+
 
     </div>
     </div>

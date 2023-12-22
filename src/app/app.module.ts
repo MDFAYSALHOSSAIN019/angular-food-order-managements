@@ -26,6 +26,13 @@ import { ViewItemComponent } from './user/view-item/view-item.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
+import { ProductDetailsComponent } from './user/product-details/product-details.component';
+import { GolobalnavComponent } from './global/golobalnav/golobalnav.component';
+import { GolobalViewComponent } from './global/golobal-view/golobal-view.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
+import { CheckoutComponent } from './user/checkout/checkout.component';
+import { MyOrderComponent } from './user/my-order/my-order.component';
+import { UserListComponent } from './admin/user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +46,13 @@ import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
     CartProductComponent,
     HomenavComponent,
     ViewItemComponent,
+    ProductDetailsComponent,
+    GolobalnavComponent,
+    GolobalViewComponent,
+    UserLoginComponent,
+    CheckoutComponent,
+    MyOrderComponent,
+    UserListComponent,
     
   ],
   imports: [

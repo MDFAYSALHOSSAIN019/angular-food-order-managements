@@ -1,34 +1,59 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { cart, product } from '../../model/data-type';
-import { ProductsService } from '../../services/products.service';
 import { ActivatedRoute } from '@angular/router';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
-  selector: 'app-view-item',
-  templateUrl: './view-item.component.html',
-  styleUrl: './view-item.component.css'
+  selector: 'app-product-details',
+  templateUrl: './product-details.component.html',
+  styleUrl: './product-details.component.css'
 })
-export class ViewItemComponent implements OnInit {
-
+export class ProductDetailsComponent {
 
   productData:undefined | product;
   productQuantity:number=1;
   removeCart=false;
   cartData:product|undefined;
-  popularProducts:undefined|product[];
-  trendyProducts:undefined | product[];
-   constructor(private product:ProductsService, private activeRoute:ActivatedRoute) {}
- 
-   ngOnInit(): void {
-     this.product.popularProducts().subscribe((data)=>{
-       this.popularProducts=data;
-     })
- 
-     this.product.trendyProducts().subscribe((data)=>{
-       this.trendyProducts=data;
-     })
+  constructor(private activeRoute:ActivatedRoute, private product:ProductsService) { }
 
-     let productId = this.activeRoute.snapshot.paramMap.get('productId');
+  // ngOnInit(): void {
+  //   let productId= this.activeRoute.snapshot.paramMap.get('productId');
+  //   console.warn(productId);
+  //   productId && this.product.getProduct(productId).subscribe((result)=>{
+  //     this.productData= result;
+  //     let cartData= localStorage.getItem('localCart');
+  //     if(productId && cartData){
+  //       let items = JSON.parse(cartData);
+  //       items = items.filter((item:product)=>productId=== item.id.toString());
+  //       if(items.length){
+  //         this.removeCart=true
+  //       }else{
+  //         this.removeCart=false
+  //       }
+  //     }
+
+  //     let user = localStorage.getItem('user');
+  //     if(user){
+  //       let userId= user && JSON.parse(user).id;
+  //       this.product.getCartList(userId);
+
+  //       this.product.cartData.subscribe((result)=>{
+  //         let item = result.filter((item:product)=>productId?.toString()===item.productId?.toString())
+  //      if(item.length){
+  //       this.cartData=item[0];
+  //       this.removeCart=true;
+  //      }
+  //       })
+  //     }
+      
+      
+      
+  //   })
+    
+  // }
+  ngOnInit(): void {
+    // let productId = this.activeRoute.snapshot.paramMap.get('productId');
+       let productId = this.activeRoute.snapshot.paramMap.get('productId');
     console.warn(productId);
   
     if (productId) {
@@ -57,8 +82,16 @@ export class ViewItemComponent implements OnInit {
         }
       });
     }
-   }
-   addToCart(){
+  }
+  handleQuantity(val:string){
+    if(this.productQuantity<20 && val==='plus'){
+      this.productQuantity+=1;
+    }else if(this.productQuantity>1 && val==='min'){
+      this.productQuantity-=1;
+    }
+  }
+
+  addToCart(){
     if(this.productData){
       this.productData.quantity = this.productQuantity;
       if(!localStorage.getItem('user')){
@@ -99,5 +132,7 @@ this.product.removeItemFromCart(productId)
     this.removeCart=false
   }
 
-   
+
+
+
 }

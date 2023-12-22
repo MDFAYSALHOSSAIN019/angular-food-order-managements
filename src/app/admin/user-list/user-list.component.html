@@ -1,0 +1,24 @@
+<app-navber></app-navber>
+<div class="mt-5 mb-3 mx-5"><h3><b><i>USER LIST</i></b></h3></div>
+<div class="card mx-5">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NAME</th>
+            <th scope="col">E-MAIL</th>
+            <th scope="col">ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let userlist of userData">
+            <th scope="row">{{userlist.id}}</th>
+            <td>{{userlist.name}}</td>
+            <td>{{userlist.email}}</td>
+            <button class="btn btn-danger " style="width: 40%; margin-right: 30px;">DELETE</button>
+            <button class="btn btn-warning" style="width: 40%;">Update</button>
+          </tr>
+     
+        </tbody>
+      </table>
+</div>
