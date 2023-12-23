@@ -24,13 +24,13 @@ export class HomenavComponent implements OnInit {
     // this.user.userAuthReload();
     this.route.events.subscribe((val: any) => {
       if (val.url) {
-        if (localStorage.getItem('seller') && val.url.includes('seller')) {
-         let sellerStore=localStorage.getItem('seller');
-         let sellerData =sellerStore && JSON.parse(sellerStore)[0];
-         this.sellerName=sellerData.name;
-          this.menuType = 'seller';
-        }
-        else if(localStorage.getItem('user')){
+        // if (localStorage.getItem('seller') && val.url.includes('seller')) {
+        //  let sellerStore=localStorage.getItem('seller');
+        //  let sellerData =sellerStore && JSON.parse(sellerStore)[0];
+        //  this.sellerName=sellerData.name;
+        //   this.menuType = 'seller';
+        // }
+        if(localStorage.getItem('user')){
           let userStore = localStorage.getItem('user');
           let userData = userStore && JSON.parse(userStore);
           this.userName= userData.name;
@@ -57,6 +57,12 @@ export class HomenavComponent implements OnInit {
     localStorage.removeItem('user');
     // Optionally, you may want to redirect the user to the login page or perform other actions
     // Example: this.router.navigate(['/login']);
+  }
+
+  userLogout(){
+    localStorage.removeItem('user');
+    this.route.navigate(['/'])
+    this.product.cartData.emit([])
   }
 
   signUp(data: signUp) {

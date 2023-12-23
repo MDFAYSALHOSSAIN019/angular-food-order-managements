@@ -1,40 +1,50 @@
 <app-homenav></app-homenav>
 
-<div class="user-auth">
-    <div *ngIf="!showLogin"  class="sign-up">
+<div class="row user-auth  container-fluid" >
+
+<div class="col-md-3"></div>
+
+    <div *ngIf="!showLogin"  class="sign-up  col-md-6 mx-5">
      <h1>User Signup</h1>
-     <form #userSignUp="ngForm" class="common-form" (ngSubmit)="signUp(userSignUp.value)">
-       <input
+     <form #userSignUp="ngForm" class="common-form form-control" (ngSubmit)="signUp(userSignUp.value)">
+      <label for=""><h4>Enter User Name</h4></label> 
+      <input
          type="text"
-         class="form-input"
+         class="form-input form-control  mb-2"
          name="name"
-         placeholder="Enter User Name"
+         placeholder="Enter User Name "
          ngModel
        />
+       <label for=""><h4>Enter User Email</h4></label> 
        <input
          type="text"
-         class="form-input"
+         class="form-input form-control  mb-2"
          name="email"
          placeholder="Enter User Email"
          ngModel
-       /><input
+       />
+       <label for=""><h4>Enter User Password</h4></label> 
+       <input
        type="password"
-       class="form-input"
+       class="form-input form-control  mb-2"
        name="password"
        placeholder="Enter User Password"
        ngModel
      />
-     <button class="form-button">Sign Up</button>
+     <button class="form-button btn btn-info">Sign Up</button>
      <p>Already Have Account ? <a (click)="openLogin()" >Click Here</a></p>
      </form>
     </div>
-    <div *ngIf="showLogin"  class="login">
+   
+    <div *ngIf="showLogin"  class="login card col-md-6" >
      <h1>User Login</h1>
-     <form #userLogin="ngForm" class="common-form" (ngSubmit)="login(userLogin.value)">
+     <form #userLogin="ngForm" class="common-form form-control" (ngSubmit)="login(userLogin.value)">
        <p class="error-p">{{authError}}</p>
+
+       <label for=""><h4>Enter User Email</h4></label> 
        <input
          type="text"
-         class="form-input"
+         class="form-input form-control mb-2"
          name="email"
          placeholder="Enter User Email"
          ngModel
@@ -43,9 +53,11 @@
          required
        />
        <p class="invalid-input"><span *ngIf="email.invalid && email.touched " >Please enter valid input</span></p>
+       
+       <label for=""><h4>Enter User password</h4></label> 
        <input
        type="password"
-       class="form-input"
+       class="form-input form-control  mb-2"
        name="password"
        placeholder="Enter User Password"
        ngModel
@@ -55,9 +67,12 @@
        required
      />
      <p class="invalid-input"><span *ngIf="password.invalid && password.touched " >Please enter valid input</span></p>
-     <button [disabled]="userLogin.invalid" class="form-button">Login</button>
+     <button [disabled]="userLogin.invalid" class="form-button btn btn-info">Login</button>
      <p>Want to Create Account ? <a (click)="openSignUp()" >Click Here</a></p>
      </form>
     </div>
+
+    <div class="col-3"></div>
+
    </div>
    

@@ -2,7 +2,7 @@
 <div class="container" id="navbar-container">
     <nav class="navbar navbar-expand-lg navbar-light bg-white" aria-label="Eighth navbar example">
         <div class="container ">
-            <a class="navbar-brand text-info" [routerLink]="['/home-page']"><h3><b><i>Star Kabab Resturent</i></b></h3></a><br>
+            <a class="navbar-brand text-info"  [routerLink]="['home-page']"> <h3><b><i>Star Kabab Resturent</i></b></h3></a><br>
           
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +20,7 @@
                     <li class="nav-item">
                         <a class="nav-link fa fa-shopping-cart"  data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"[routerLink]="cartItems>0?'/All-cart-item':null">Cart({{cartItems}})</a>
                     </li>
-
+                
 
                     <li class="nav-item" >
                         <a class="nav-link" data-bs-toggle="collapse" routerLink="/my-order">My Order</a>
@@ -29,7 +29,7 @@
                         <a class="nav-link" data-bs-toggle="collapse" routerLink="/userlogin">Login/SignUp</a>
                     </li>
                     <li class="nav-item" >
-                        <a class="nav-link" data-bs-toggle="collapse" routerLink="">logOut</a>
+                        <a class="nav-link" data-bs-toggle="collapse"      (click)="userLogout()" >logOut</a>
                     </li>
 
                     <!-- <button type="button" class="btn mt-1"  data-bs-toggle="modal" data-bs-target="#exampleModal2">
@@ -42,7 +42,7 @@
 
                     <li class="nav-item dropdown" >
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Hi,
+                              Hi,{{userName | titlecase}}
                             </a>
                         <div class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" >Profile</a>

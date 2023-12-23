@@ -7,8 +7,14 @@
 
 .user-auth {
     margin-bottom: 100px;
+    
 }
 .user-auth a{
     color: chartreuse;
     cursor: pointer;
+}
+.card{
+
+    margin-right: 400px;
+
 }
