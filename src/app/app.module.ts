@@ -33,6 +33,7 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
 import { CheckoutComponent } from './user/checkout/checkout.component';
 import { MyOrderComponent } from './user/my-order/my-order.component';
 import { UserListComponent } from './admin/user-list/user-list.component';
+import { UserOrderListComponent } from './admin/user-order-list/user-order-list.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { UserListComponent } from './admin/user-list/user-list.component';
     CheckoutComponent,
     MyOrderComponent,
     UserListComponent,
+    UserOrderListComponent,
     
   ],
   imports: [
@@ -64,7 +66,7 @@ import { UserListComponent } from './admin/user-list/user-list.component';
     AngularFireModule,
     AngularFireStorageModule,
     NgbModule,
-     FontAwesomeModule,
+    FontAwesomeModule,
      
 
     provideFirebaseApp(() => initializeApp({"projectId":"angular-food-order-management","appId":"1:414132381419:web:d69001ca3a0ea322be40ae","storageBucket":"angular-food-order-management.appspot.com","apiKey":"AIzaSyCvt_czY3CcpEOXwgFydL9qjqPY8kQZw0E","authDomain":"angular-food-order-management.firebaseapp.com","messagingSenderId":"414132381419"})),

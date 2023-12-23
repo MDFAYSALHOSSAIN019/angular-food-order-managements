@@ -17,6 +17,7 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
 import { CheckoutComponent } from './user/checkout/checkout.component';
 import { MyOrderComponent } from './user/my-order/my-order.component';
 import { UserListComponent } from './admin/user-list/user-list.component';
+import { UserOrderListComponent } from './admin/user-order-list/user-order-list.component';
 
 const routes: Routes = [
 
@@ -36,7 +37,8 @@ const routes: Routes = [
   {path:'userlogin',component:UserLoginComponent},
   {path:'checkout', component:CheckoutComponent},
   {path:'my-order', component:MyOrderComponent},
-  {path:'user-list',component:UserListComponent}
+  {path:'user-list',component:UserListComponent},
+  {path:'user-order-list',component:UserOrderListComponent}
 
 
 ];

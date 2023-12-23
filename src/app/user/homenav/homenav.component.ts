@@ -52,66 +52,66 @@ export class HomenavComponent implements OnInit {
 
   }
 
-  // logout() {
-  //   // Add your logout logic here, such as clearing user data from local storage
-  //   localStorage.removeItem('user');
-  //   // Optionally, you may want to redirect the user to the login page or perform other actions
-  //   // Example: this.router.navigate(['/login']);
-  // }
+  logout() {
+    // Add your logout logic here, such as clearing user data from local storage
+    localStorage.removeItem('user');
+    // Optionally, you may want to redirect the user to the login page or perform other actions
+    // Example: this.router.navigate(['/login']);
+  }
 
-  // signUp(data: signUp) {
-  //   this.user.userSignUp(data);
-  //   alert("data is save")
-  // }
-  // login(data: login) {
-  //   this.user.userLogin(data)
-  //   this.user.invalidUserAuth.subscribe((result)=>{
-  //     console.warn(result);
-  //     if(result){
-  //        this.authError="User not found"
-  //     }else{
-  //       this.localCartToRemoteCart();
-  //     }
+  signUp(data: signUp) {
+    this.user.userSignUp(data);
+    alert("data is save")
+  }
+  login(data: login) {
+    this.user.userLogin(data)
+    this.user.invalidUserAuth.subscribe((result)=>{
+      console.warn(result);
+      if(result){
+         this.authError="User not found"
+      }else{
+        this.localCartToRemoteCart();
+      }
       
-  //   })
-  // }
-//   openSignUp(){
-//     this.showLogin=false
-//   }
-//   openLogin(){
-// this.showLogin=true;
-//   }
+    })
+  }
+  openSignUp(){
+    this.showLogin=false
+  }
+  openLogin(){
+this.showLogin=true;
+  }
 
-//   localCartToRemoteCart(){
-//    let data = localStorage.getItem('localCart');
-//    let user = localStorage.getItem('user');
-//    let userId= user && JSON.parse(user).id;
-//    if(data){
-//     let cartDataList:product[]= JSON.parse(data);
+  localCartToRemoteCart(){
+   let data = localStorage.getItem('localCart');
+   let user = localStorage.getItem('user');
+   let userId= user && JSON.parse(user).id;
+   if(data){
+    let cartDataList:product[]= JSON.parse(data);
   
-//     cartDataList.forEach((product:product, index)=>{
-//       let cartData:cart={
-//         ...product,
-//         productId:product.id,
-//         userId
-//       }
-//       delete cartData.id;
-//       setTimeout(() => {
-//         this.product.addToCart(cartData).subscribe((result)=>{
-//           if(result){
-//             console.warn("data is stored in DB");
-//           }
-//         })
-//       }, 500);
-//       if(cartDataList.length===index+1){
-//         localStorage.removeItem('localCart')
-//       }
-//     })
-//    }
+    cartDataList.forEach((product:product, index)=>{
+      let cartData:cart={
+        ...product,
+        productId:product.id,
+        userId
+      }
+      delete cartData.id;
+      setTimeout(() => {
+        this.product.addToCart(cartData).subscribe((result)=>{
+          if(result){
+            console.warn("data is stored in DB");
+          }
+        })
+      }, 500);
+      if(cartDataList.length===index+1){
+        localStorage.removeItem('localCart')
+      }
+    })
+   }
 
-//    setTimeout(() => {
-//     this.product.getCartList(userId)
-//    }, 2000);
+   setTimeout(() => {
+    this.product.getCartList(userId)
+   }, 2000);
     
-//   }
+  }
 }

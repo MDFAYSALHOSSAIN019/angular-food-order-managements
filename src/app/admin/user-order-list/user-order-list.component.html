@@ -1,0 +1,52 @@
+
+<app-navber></app-navber>
+<div class="mt-5 mb-3 mx-5"><h3><b><i>Food Order LIST</i></b></h3></div>
+<div class="row ">
+    <div class="card col-md-4 m-3 " style="width: 18rem; background-color: turquoise;"  *ngFor="let cartDatas of cartData ">
+        <div class="card-body"  >
+          <h5 class="card-title">{{cartDatas.name}}</h5>
+        
+          <h6 class="card-subtitle mb-2 text-muted">category : {{cartDatas.category}}</h6>
+        
+          <h6 class="card-subtitle mb-2 text-muted">Quantity : {{cartDatas.quantity}}</h6>
+          <h6 class="card-subtitle mb-2 text-muted">Price : {{cartDatas.price}}</h6>
+          <p class="card-text">description : {{cartDatas.description}}</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+</div>
+
+
+
+
+
+
+
+<!-- <div class="card mx-5">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Food Name</th>
+            <th scope="col">Food Catagory</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">price</th>    
+            <th scope="col">ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cartDatas of cartData ">
+            <th scope="row">{{cartData.id}}</th>
+            <td>{{cartDatas.name}}</td>
+            <td>{{cartDatas.category}}</td>
+            <td>{{cartDatas.quantity}}</td>
+            <td>{{cartDatas.price}}</td>
+         
+            <button class="btn btn-danger " style="width: 40%; margin-right: 30px;">order Complete</button>
+            <button class="btn btn-warning" style="width: 40%;">Update</button>
+          </tr>
+     
+        </tbody>
+      </table>
+</div> -->
