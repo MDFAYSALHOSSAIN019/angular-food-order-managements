@@ -58,4 +58,41 @@ Implement secure user authentication and authorization mechanisms to control acc
 
 :pushpin: Dashboard page for Admin:
 Our Java Swing-based Point of Sale (POS) system includes a dynamic dashboard feature, providing at-a-glance insights into crucial business metrics. The dashboard prominently displays total sales, purchase amount, and revenue percentage, offering a comprehensive overview of the shop's financial performance. With real-time updates and interactive visualization, owners can quickly assess their profitability and make informed decisions to drive growth. Experience the power of data-driven decision-making with our intuitive dashboard feature, empowering businesses to thrive in today's competitive market landscape.
-![ Home page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/dashbord.jpg?raw=true))
+![ Home page](https://github.com/MDFAYSALHOSSAIN019/angular-food-order-managements/blob/master/Screen%20Short/home.jpg?raw=true))
+
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/angular-food-order-managements/blob/master/Screen%20Short/manu.jpg?raw=true)
+
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/angular-food-order-managements/blob/master/Screen%20Short/view%20Details.jpg?raw=true)
+
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/angular-food-order-managements/blob/master/Screen%20Short/cart%20page.jpg?raw=true)
+
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/angular-food-order-managements/blob/master/Screen%20Short/chaek%20opt.jpg?raw=true)
+
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/angular-food-order-managements/blob/master/Screen%20Short/customar%20order.jpg?raw=true)
+
+:pushpin: Dashboard page for Admin:
+Our Java Swing-based Point of Sale (POS) system includes a dynamic dashboard feature, providing at-a-glance insights into crucial business metrics. The dashboard prominently displays total sales, purchase amount, and revenue percentage, offering a comprehensive overview of the shop's financial performance. With real-time updates and interactive visualization, owners can quickly assess their profitability and make informed decisions to drive growth. Experience the power of data-driven decision-making with our intuitive dashboard feature, empowering businesses to thrive in today's competitive market landscape.
+![ Home page](https://github.com/MDFAYSALHOSSAIN019/angular-food-order-managements/blob/master/Screen%20Short/admin%20home.jpg?raw=true))
+
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/angular-food-order-managements/blob/master/Screen%20Short/Food%20Add%20.jpg?raw=true)
+
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/angular-food-order-managements/blob/master/Screen%20Short/User%20List.jpg?raw=true)
+
+:pushpin: Product Add/Update page for Admin:
+Easily add new products to the shop inventory, including details such as name, description, category, quantity, and price.
+![ Add Product page](https://github.com/MDFAYSALHOSSAIN019/angular-food-order-managements/blob/master/Screen%20Short/order%20List.jpg?raw=true)
+
