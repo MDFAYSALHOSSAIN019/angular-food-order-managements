@@ -51,10 +51,7 @@ Introducing our Java Swing-based School Management system (SMS), a robust deskto
 - :  Apache NetBeans
 - :  [<img src="Screenshot/Java.png" width="80" height="80">](https://www.java.com/en/download/help/whatis_java.html) Java JDK 17+
   
-:pushpin: Login page for Admin:
-Implement secure user authentication and authorization mechanisms to control access to sensitive features and data, ensuring data integrity and confidentiality.
 
-![ Login page](https://github.com/MDFAYSALHOSSAIN019/School_Management_System-Swing-/blob/main/Sweing%20project%20sereenshot-20240320T162315Z-001/ScreenShortAll%20SMS%20Swing/log.jpg?raw=true)
 
 :pushpin: Dashboard page for Admin:
 Our Java Swing-based Point of Sale (POS) system includes a dynamic dashboard feature, providing at-a-glance insights into crucial business metrics. The dashboard prominently displays total sales, purchase amount, and revenue percentage, offering a comprehensive overview of the shop's financial performance. With real-time updates and interactive visualization, owners can quickly assess their profitability and make informed decisions to drive growth. Experience the power of data-driven decision-making with our intuitive dashboard feature, empowering businesses to thrive in today's competitive market landscape.
